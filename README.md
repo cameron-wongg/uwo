@@ -1,23 +1,62 @@
-# Tutorial 1 (Score out of 100)
+# Tutorial 2
 
-In this tutorial you will ensure you have visual studio code and node.js properly installed and upload a file to gradescope.
+## Gradescope instructions:
 
-## Task 1 (Ungraded)
+Solution filenames should be:
+dataTypesSolution.js (Task 1)
+shortCircuitsSolution.js (Task 2)
 
-Install [visual studio code](https://code.visualstudio.com/) and [node.js](https://nodejs.org/en/download).
 
-## Task 2 (100 points toal)
+## Task 1: Datatypes and Comparisons
 
-Download the file from the course website called tutorial_1.zip . If desired, open the instructions (identical to those on OWL) in README.md in visual studio code and view using ctrl + shift + v. Open the file tutorial_1.js . Fill in the missing line and&nbsp;do not&nbsp;change the exiting output line. (50 points for correct output)
+The goal of this task is to practice with basic datatypes in javascript.
 
-Upload to [gradescope](https://guides.gradescope.com/hc/en-us/articles/21865616724749-Submitting-a-Code-assignment). You must submit to gradescope through Github.
-    1. [Link your Github account to Gradescope](https://guides.gradescope.com/hc/en-us/articles/21587275611533-Linking-and-Unlinking-Accounts). Course staff will view your submissions through Gradescope, but will be able to see your Github name, so make a new account if desired.
-    2. [Create a repository on Github](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) for your assignment. The upload should work even if you would like to make your repository private.
-    3. [Add your file](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository) you made and be sure to check that you have committed and pushed the change. The file **must** be named tutorial1Solution.js (for the autograder). It must be in the root of the respository (not in a folder) for the autograder to recognize it.
-    4. [Submit to Gradescope](https://guides.gradescope.com/hc/en-us/articles/21865616724749-Submitting-a-Code-assignment) by choosing the repository.
-    5. Check the autograded output. You may resubmit using the same steps as many times as needed, as long as you are before the deadline.
+Be careful about the difference between undefined and null values. An undefined value can occur when a variable is not initalized:
 
- (50 points for file upload, no points for output if file not uploaded correctly)
+let x; //undefined
+
+Null values can either be set explicitly or can be a result of operations with one null value (which we will see later).
+
+let x = null;
+
+## Task 2: Shortcircuits
+
+The goal of this task is to understand lazy evaluation. Follow the instructions in the code comments.
+
+ In Javascript, boolean expressions have lazy evaluation. This means that evalution can stop early depending on the values. Non-boolean values in boolean expressions are converted to booleans for evaluation. For example "0" is converted to false and "1" to true. Strings like "hello" are also true. 
+
+For && \(AND\) evaluation stops early if the first argument is false. It returns the value of the first argument, even if it is not boolean.
+let x = 0 && true; // returns 0
+
+Otherwise, it returns the second expression.
+let y = true && "hello" // returns hello
+
+For || \(OR\) evaluation stops early if the first argument casts to true (even if it's not boolean).
+let x = "hello" && true; // true
+
+Otherwise, it returns the second expression.
+let y =  0 && "hello" // returns hello
+
+
+
+## Grading
+
+Autograder: 50 / 100 Points
+
+**Do not** deliberately write output code to fool the autograder (such as by hardcoding output rather than calling the function). Assignments that do this will recieve a grade of 0.
+
+Additionally, do not add any additional output statements. This will result in the autograder not recognizing your correct solutions. (Note that you will get a chance to resubmit.)
+
+Following instructions: 50 / 100 Points
+
+Follow the instructions in the assignment. If you are asked to produce an outcome using a particular technique marks will be lost for using the a different technique that produces the same outcome, because the goal is to practice concepts.
+
+
+
+
+
+
+
 
 
 
